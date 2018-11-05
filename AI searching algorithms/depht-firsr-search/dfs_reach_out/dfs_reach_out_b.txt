@@ -1,0 +1,41 @@
+Enter name of START VERTEX(vq to quit): l
+<<<<<<<DEPTH FIRST SEARCH OUTPUT>>>>>>>>>>
+START VERTEX is: l
+------------------------------
+CURRENT VERTEX( l )... PATH: --l
+NEXT NODE: f
+------------------------------
+CURRENT VERTEX( f )... PATH: --l--f
+NEXT NODE: a
+------------------------------
+CURRENT VERTEX( a )... PATH: --l--f--a
+NEXT NODE: Moving BACK to NODE(f)
+NEXT NODE: g
+------------------------------
+CURRENT VERTEX( g )... PATH: --l--f--g
+NEXT NODE: h
+------------------------------
+CURRENT VERTEX( h )... PATH: --l--f--g--h
+NEXT NODE: Moving BACK to NODE(g)
+NEXT NODE: Moving BACK to NODE(f)
+NEXT NODE: h
+PRUNED VERTEX( h )
+NEXT NODE: Moving BACK to NODE(f)
+NEXT NODE: Moving BACK to NODE(l)
+====================RESULT=================
+==========GRAPH=============
+***************************
+a: 
+b: a, c
+c: l
+d: a, b
+e: j
+f: a, g, h
+g: h
+h: g
+i: k
+j: d, l
+k: j
+l: f
+LIST of VERTICES REACHABLE from l: 
+['l', 'f', 'a', 'g', 'h']

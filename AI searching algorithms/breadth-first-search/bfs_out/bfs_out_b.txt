@@ -1,0 +1,124 @@
+=============================================
+==========GRAPH=============
+***************************
+a: d, h, l
+b: f, k, m
+c: e, n, o
+d: i, l, m
+e: d, f, k
+f: k, o
+g: i, l
+h: e, n
+i: b, l
+j: b, f
+k: g, m
+l: c, f
+m: b, j
+n: f, k
+o: b, d
+Enter name of START VERTEX(vq to quit): d
+Enter name of GOAL VERTEX: h
+<<<<<<<BREADTH FIRST SEARCH OUTPUT>>>>>>>>>>
+Vertices are: d, h
+--------------------------------------------
+Queue:  ['d']
+REMOVED from Queue: Vertex( d )
+Expanding Vertex( d ) <PATH: --d>
+ADDED to Queue: Edge Vertex( d--i )
+ADDED to Queue: Edge Vertex( d--l )
+ADDED to Queue: Edge Vertex( d--m )
+--------------------------------------------
+Queue:  ['i', 'l', 'm']
+REMOVED from Queue: Vertex( i )
+Expanding Vertex( i ) <PATH: --d--i>
+ADDED to Queue: Edge Vertex( i--b )
+PRUNED EDGE VERTEX( i--l )
+--------------------------------------------
+Queue:  ['l', 'm', 'b']
+REMOVED from Queue: Vertex( l )
+Expanding Vertex( l ) <PATH: --d--l>
+ADDED to Queue: Edge Vertex( l--c )
+ADDED to Queue: Edge Vertex( l--f )
+--------------------------------------------
+Queue:  ['m', 'b', 'c', 'f']
+REMOVED from Queue: Vertex( m )
+Expanding Vertex( m ) <PATH: --d--m>
+PRUNED EDGE VERTEX( m--b )
+ADDED to Queue: Edge Vertex( m--j )
+--------------------------------------------
+Queue:  ['b', 'c', 'f', 'j']
+REMOVED from Queue: Vertex( b )
+Expanding Vertex( b ) <PATH: --d--i--b>
+PRUNED EDGE VERTEX( b--f )
+ADDED to Queue: Edge Vertex( b--k )
+PRUNED EDGE VERTEX( b--m )
+--------------------------------------------
+Queue:  ['c', 'f', 'j', 'k']
+REMOVED from Queue: Vertex( c )
+Expanding Vertex( c ) <PATH: --d--l--c>
+ADDED to Queue: Edge Vertex( c--e )
+ADDED to Queue: Edge Vertex( c--n )
+ADDED to Queue: Edge Vertex( c--o )
+--------------------------------------------
+Queue:  ['f', 'j', 'k', 'e', 'n', 'o']
+REMOVED from Queue: Vertex( f )
+Expanding Vertex( f ) <PATH: --d--l--f>
+PRUNED EDGE VERTEX( f--k )
+PRUNED EDGE VERTEX( f--o )
+--------------------------------------------
+Queue:  ['j', 'k', 'e', 'n', 'o']
+REMOVED from Queue: Vertex( j )
+Expanding Vertex( j ) <PATH: --d--m--j>
+PRUNED EDGE VERTEX( j--b )
+PRUNED EDGE VERTEX( j--f )
+--------------------------------------------
+Queue:  ['k', 'e', 'n', 'o']
+REMOVED from Queue: Vertex( k )
+Expanding Vertex( k ) <PATH: --d--i--b--k>
+ADDED to Queue: Edge Vertex( k--g )
+PRUNED EDGE VERTEX( k--m )
+--------------------------------------------
+Queue:  ['e', 'n', 'o', 'g']
+REMOVED from Queue: Vertex( e )
+Expanding Vertex( e ) <PATH: --d--l--c--e>
+PRUNED EDGE VERTEX( e--d )
+PRUNED EDGE VERTEX( e--f )
+PRUNED EDGE VERTEX( e--k )
+--------------------------------------------
+Queue:  ['n', 'o', 'g']
+REMOVED from Queue: Vertex( n )
+Expanding Vertex( n ) <PATH: --d--l--c--n>
+PRUNED EDGE VERTEX( n--f )
+PRUNED EDGE VERTEX( n--k )
+--------------------------------------------
+Queue:  ['o', 'g']
+REMOVED from Queue: Vertex( o )
+Expanding Vertex( o ) <PATH: --d--l--c--o>
+PRUNED EDGE VERTEX( o--b )
+PRUNED EDGE VERTEX( o--d )
+--------------------------------------------
+Queue:  ['g']
+REMOVED from Queue: Vertex( g )
+Expanding Vertex( g ) <PATH: --d--i--b--k--g>
+PRUNED EDGE VERTEX( g--i )
+PRUNED EDGE VERTEX( g--l )
+Vertices are: ( d ), ( h )
+====================RESULT=================
+==========GRAPH=============
+***************************
+a: d, h, l
+b: f, k, m
+c: e, n, o
+d: i, l, m
+e: d, f, k
+f: k, o
+g: i, l
+h: e, n
+i: b, l
+j: b, f
+k: g, m
+l: c, f
+m: b, j
+n: f, k
+o: b, d
+There is no path.

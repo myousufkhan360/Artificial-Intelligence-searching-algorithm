@@ -1,0 +1,91 @@
+=============================================
+==========GRAPH=============
+***************************
+a: d, h, l
+b: f, k, m
+c: e, n, o
+d: i, l, m
+e: d, f, k
+f: k, o
+g: i, l
+h: e, n
+i: b, l
+j: b, f
+k: g, m
+l: c, f
+m: b, j
+n: f, k
+o: b, d
+Enter name of START VERTEX(vq to quit): k
+Enter name of GOAL VERTEX: e
+<<<<<<<BREADTH FIRST SEARCH OUTPUT>>>>>>>>>>
+Vertices are: k, e
+--------------------------------------------
+Queue:  ['k']
+REMOVED from Queue: Vertex( k )
+Expanding Vertex( k ) <PATH: --k>
+ADDED to Queue: Edge Vertex( k--g )
+ADDED to Queue: Edge Vertex( k--m )
+--------------------------------------------
+Queue:  ['g', 'm']
+REMOVED from Queue: Vertex( g )
+Expanding Vertex( g ) <PATH: --k--g>
+ADDED to Queue: Edge Vertex( g--i )
+ADDED to Queue: Edge Vertex( g--l )
+--------------------------------------------
+Queue:  ['m', 'i', 'l']
+REMOVED from Queue: Vertex( m )
+Expanding Vertex( m ) <PATH: --k--m>
+ADDED to Queue: Edge Vertex( m--b )
+ADDED to Queue: Edge Vertex( m--j )
+--------------------------------------------
+Queue:  ['i', 'l', 'b', 'j']
+REMOVED from Queue: Vertex( i )
+Expanding Vertex( i ) <PATH: --k--g--i>
+PRUNED EDGE VERTEX( i--b )
+PRUNED EDGE VERTEX( i--l )
+--------------------------------------------
+Queue:  ['l', 'b', 'j']
+REMOVED from Queue: Vertex( l )
+Expanding Vertex( l ) <PATH: --k--g--l>
+ADDED to Queue: Edge Vertex( l--c )
+ADDED to Queue: Edge Vertex( l--f )
+--------------------------------------------
+Queue:  ['b', 'j', 'c', 'f']
+REMOVED from Queue: Vertex( b )
+Expanding Vertex( b ) <PATH: --k--m--b>
+PRUNED EDGE VERTEX( b--f )
+PRUNED EDGE VERTEX( b--k )
+PRUNED EDGE VERTEX( b--m )
+--------------------------------------------
+Queue:  ['j', 'c', 'f']
+REMOVED from Queue: Vertex( j )
+Expanding Vertex( j ) <PATH: --k--m--j>
+PRUNED EDGE VERTEX( j--b )
+PRUNED EDGE VERTEX( j--f )
+--------------------------------------------
+Queue:  ['c', 'f']
+REMOVED from Queue: Vertex( c )
+Expanding Vertex( c ) <PATH: --k--g--l--c>
+ADDED to Queue: Edge Vertex( c--e )
+Vertices are: ( k ), ( e )
+====================RESULT=================
+==========GRAPH=============
+***************************
+a: d, h, l
+b: f, k, m
+c: e, n, o
+d: i, l, m
+e: d, f, k
+f: k, o
+g: i, l
+h: e, n
+i: b, l
+j: b, f
+k: g, m
+l: c, f
+m: b, j
+n: f, k
+o: b, d
+Vertices are: k, e
+SHORTEST PATH FOUND: <PATH: --k--g--l--c--e>

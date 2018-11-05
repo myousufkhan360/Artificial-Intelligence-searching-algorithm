@@ -1,0 +1,81 @@
+==========GRAPH=============
+***************************
+a: h
+b: a, g
+c: g
+d: l
+e: b, o
+f: n
+g: h
+h: k
+i: j
+j: h, o
+k: c, i
+l: o
+m: a
+n: 
+o: f, i, n
+Enter name of START VERTEX(vq to quit): a
+<<<<<<<DEPTH FIRST SEARCH OUTPUT>>>>>>>>>>
+START VERTEX is: a
+------------------------------
+CURRENT VERTEX( a )... PATH: --a
+NEXT NODE: h
+------------------------------
+CURRENT VERTEX( h )... PATH: --a--h
+NEXT NODE: k
+------------------------------
+CURRENT VERTEX( k )... PATH: --a--h--k
+NEXT NODE: c
+------------------------------
+CURRENT VERTEX( c )... PATH: --a--h--k--c
+NEXT NODE: g
+------------------------------
+CURRENT VERTEX( g )... PATH: --a--h--k--c--g
+NEXT NODE: Moving BACK to NODE(c)
+NEXT NODE: Moving BACK to NODE(k)
+NEXT NODE: i
+------------------------------
+CURRENT VERTEX( i )... PATH: --a--h--k--i
+NEXT NODE: j
+------------------------------
+CURRENT VERTEX( j )... PATH: --a--h--k--i--j
+NEXT NODE: o
+------------------------------
+CURRENT VERTEX( o )... PATH: --a--h--k--i--j--o
+NEXT NODE: f
+------------------------------
+CURRENT VERTEX( f )... PATH: --a--h--k--i--j--o--f
+NEXT NODE: n
+------------------------------
+CURRENT VERTEX( n )... PATH: --a--h--k--i--j--o--f--n
+NEXT NODE: Moving BACK to NODE(f)
+NEXT NODE: Moving BACK to NODE(o)
+NEXT NODE: n
+PRUNED VERTEX( n )
+NEXT NODE: Moving BACK to NODE(o)
+NEXT NODE: Moving BACK to NODE(j)
+NEXT NODE: Moving BACK to NODE(i)
+NEXT NODE: Moving BACK to NODE(k)
+NEXT NODE: Moving BACK to NODE(h)
+NEXT NODE: Moving BACK to NODE(a)
+====================RESULT=================
+==========GRAPH=============
+***************************
+a: h
+b: a, g
+c: g
+d: l
+e: b, o
+f: n
+g: h
+h: k
+i: j
+j: h, o
+k: c, i
+l: o
+m: a
+n: 
+o: f, i, n
+LIST of VERTICES REACHABLE from a: 
+['a', 'h', 'k', 'c', 'g', 'i', 'j', 'o', 'f', 'n']
